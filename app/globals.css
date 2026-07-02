@@ -1,26 +1,54 @@
 @import "tailwindcss";
 
+/*
+  Dark-luxury single-theme lock (Section 4.11): the whole page stays on this
+  ink/bone/moss palette, no section inverts to light. One accent, one radius
+  system: pills for interactive controls, 20px for panels, 8px for inputs.
+*/
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-ink: #0b0c0d;
+  --color-ink-raised: #131418;
+  --color-ink-line: #232428;
+  --color-bone: #f2ede2;
+  --color-bone-muted: #a29c8e;
+  --color-moss: #5f8a6f;
+  --color-moss-strong: #7bab8c;
+
+  --space-section: clamp(4rem, 3rem + 5vw, 8rem);
+  --duration-fast: 150ms;
+  --duration-normal: 400ms;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-ink: var(--color-ink);
+  --color-ink-raised: var(--color-ink-raised);
+  --color-ink-line: var(--color-ink-line);
+  --color-bone: var(--color-bone);
+  --color-bone-muted: var(--color-bone-muted);
+  --color-moss: var(--color-moss);
+  --color-moss-strong: var(--color-moss-strong);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-ink);
+  color: var(--color-bone);
+}
+
+::selection {
+  background: var(--color-moss);
+  color: var(--color-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
