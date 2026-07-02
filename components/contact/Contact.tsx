@@ -1,12 +1,15 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import Script from "next/script";
 import {
   Clock,
   EnvelopeSimple,
   MapPin,
   Phone,
 } from "@phosphor-icons/react";
+
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? "";
 
 const CONTACT_DETAILS = [
   { icon: MapPin, label: "1200 Lorem Avenue, Suite 400, Ipsum City" },
@@ -19,18 +22,47 @@ type Status = "idle" | "submitting" | "success" | "error";
 
 export function Contact() {
   const [status, setStatus] = useState<Status>("idle");
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus("submitting");
+    setErrorMessage(null);
 
-    window.setTimeout(() => {
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          phone: formData.get("phone"),
+          message: formData.get("message"),
+          hpToken: formData.get("hpToken"),
+          turnstileToken: formData.get("cf-turnstile-response"),
+        }),
+      });
+
+      if (!response.ok) {
+        const body = (await response.json().catch(() => null)) as { error?: string } | null;
+        throw new Error(body?.error ?? "Failed to send message");
+      }
+
       setStatus("success");
-    }, 900);
+      form.reset();
+    } catch (error: unknown) {
+      setStatus("error");
+      setErrorMessage(error instanceof Error ? error.message : "Failed to send message");
+    }
   }
 
   return (
     <section id="contact" className="py-(--space-section)">
+      <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" strategy="afterInteractive" async defer />
+
       <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-12 px-6 md:grid-cols-12 md:gap-10 md:px-10">
         <div className="md:col-span-5">
           <h2 className="font-display text-4xl leading-tight text-bone md:text-5xl">
@@ -129,6 +161,30 @@ export function Contact() {
                   details in this form.
                 </p>
               </div>
+
+              <div
+                className="absolute -left-[9999px] h-0 w-0 overflow-hidden opacity-0"
+                aria-hidden="true"
+              >
+                <label htmlFor="hp-token">Leave this field empty</label>
+                <input
+                  id="hp-token"
+                  name="hpToken"
+                  type="text"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  data-lpignore="true"
+                  data-1p-ignore="true"
+                />
+              </div>
+
+              <div className="cf-turnstile" data-sitekey={TURNSTILE_SITE_KEY} data-theme="dark" />
+
+              {status === "error" && errorMessage ? (
+                <p role="alert" className="text-sm text-red-400">
+                  {errorMessage}
+                </p>
+              ) : null}
 
               <button
                 type="submit"
