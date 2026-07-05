@@ -4,10 +4,10 @@ import { Bank, Certificate, Scales, SealCheck } from "@phosphor-icons/react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const CREDENTIALS = [
-  { icon: Scales, name: "Lorem State Bar", detail: "Admitted 2014" },
-  { icon: Certificate, name: "Ipsum Bar Association", detail: "Member" },
-  { icon: SealCheck, name: "Dolor Trial Lawyers", detail: "Fellow" },
-  { icon: Bank, name: "Sit Federal Court", detail: "Admitted" },
+  { icon: Scales, name: "State Bar of Meridian", detail: "Admitted 2009" },
+  { icon: Certificate, name: "Cedar County Bar Association", detail: "Member" },
+  { icon: SealCheck, name: "Meridian Trial Lawyers", detail: "Fellow" },
+  { icon: Bank, name: "U.S. District Court, Meridian", detail: "Admitted" },
 ];
 
 export function TrustStrip() {

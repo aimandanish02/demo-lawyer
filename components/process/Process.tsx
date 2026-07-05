@@ -5,23 +5,23 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const STEPS = [
   {
     number: "01",
-    title: "Excepteur",
-    description: "Sint occaecat cupidatat non proident sunt in culpa.",
+    title: "Consultation",
+    description: "A free 30-minute call to understand your situation and options.",
   },
   {
     number: "02",
-    title: "Occaecat",
-    description: "Qui officia deserunt mollit anim id est laborum.",
+    title: "Case Review",
+    description: "Documents, evidence, and timelines assessed in detail.",
   },
   {
     number: "03",
-    title: "Cupidatat",
-    description: "Sed ut perspiciatis unde omnis iste natus error.",
+    title: "Strategy",
+    description: "A clear plan, likely costs, and realistic timeline laid out.",
   },
   {
     number: "04",
-    title: "Proident",
-    description: "Voluptatem accusantium doloremque laudantium totam rem.",
+    title: "Resolution",
+    description: "Negotiation or trial, with regular updates throughout.",
   },
 ];
 
@@ -32,7 +32,7 @@ export function Process() {
     <section className="py-(--space-section)">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
         <h2 className="max-w-lg font-display text-4xl leading-tight text-bone md:text-5xl">
-          Quis nostrud exercitation.
+          How it works.
         </h2>
 
         <div ref={scope} className="relative mt-14 grid grid-cols-1 gap-10 md:grid-cols-4 md:gap-6">

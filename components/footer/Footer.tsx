@@ -13,15 +13,15 @@ export function Footer() {
           <div className="max-w-sm">
             <a href="#top" className="flex items-center gap-2.5">
               <span className="flex h-9 w-9 items-center justify-center rounded-full border border-moss/50 font-display text-base italic text-moss-strong">
-                L
+                EM
               </span>
               <span className="font-display text-lg tracking-tight text-bone">
-                Lorem Ipsum Dolor
+                Elena Marchetti
               </span>
             </a>
             <p className="mt-4 text-sm leading-relaxed text-bone-muted">
-              Consectetur adipiscing elit sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua.
+              Trial attorney serving Cedar Falls and the surrounding county
+              in personal injury, business, family, and estate matters.
             </p>
           </div>
 

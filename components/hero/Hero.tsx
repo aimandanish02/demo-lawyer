@@ -55,15 +55,16 @@ export function Hero() {
             data-hero-headline
             className="max-w-lg font-display text-5xl leading-[1.08] tracking-tight text-bone md:text-7xl"
           >
-            Lorem ipsum <em className="italic text-moss-strong">dolor</em> sit
-            amet.
+            Trial law, <em className="italic text-moss-strong">handled</em> with
+            care.
           </h1>
           <p
             data-hero-subtext
             className="mt-6 max-w-md text-base leading-relaxed text-bone-muted md:text-lg"
           >
-            Consectetur adipiscing elit sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua ut enim minim.
+            Elena Marchetti represents individuals and business owners in
+            Cedar Falls through personal injury, litigation, family, and
+            estate matters — with 17 years of courtroom experience.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a
@@ -90,8 +91,8 @@ export function Hero() {
             className="relative aspect-[4/5] w-full overflow-hidden rounded-[20px] border border-ink-line"
           >
             <Image
-              src="https://picsum.photos/seed/lorem-ipsum-attorney-portrait/900/1125"
-              alt="Portrait of attorney in office"
+              src="https://images.unsplash.com/photo-1758518727888-ffa196002e59?q=80&w=900&h=1125&fit=crop&crop=faces&auto=format"
+              alt="Portrait of Elena Marchetti in her office"
               fill
               priority
               fetchPriority="high"

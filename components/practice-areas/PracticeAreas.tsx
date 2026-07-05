@@ -13,32 +13,32 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const PRACTICE_AREAS = [
   {
     icon: Scales,
-    title: "Lorem Ipsum",
+    title: "Personal Injury",
     description:
-      "Dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt.",
+      "Car accidents, workplace injuries, and wrongful death claims. Contingency fee — no recovery, no fee.",
     featured: true,
   },
   {
     icon: Briefcase,
-    title: "Dolor Sit",
-    description: "Ut labore et dolore magna aliqua ut enim minim veniam.",
+    title: "Business Litigation",
+    description: "Contract disputes, partnership breakups, and commercial claims.",
     tint: true,
   },
   {
     icon: House,
-    title: "Consectetur",
-    description: "Quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+    title: "Family Law",
+    description: "Divorce, custody, and support arrangements handled with discretion.",
   },
   {
     icon: UsersThree,
-    title: "Adipiscing Elit",
-    description: "Duis aute irure dolor in reprehenderit in voluptate velit.",
+    title: "Estate Planning",
+    description: "Wills, trusts, and probate for individuals and families.",
     tint: true,
   },
   {
     icon: FileText,
-    title: "Eiusmod Tempor",
-    description: "Excepteur sint occaecat cupidatat non proident sunt culpa.",
+    title: "Criminal Defense",
+    description: "Misdemeanor and felony defense across Cedar County courts.",
   },
 ];
 
@@ -49,7 +49,7 @@ export function PracticeAreas() {
     <section id="practice" className="py-(--space-section)">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
         <h2 className="max-w-xl font-display text-4xl leading-tight text-bone md:text-5xl">
-          Consectetur adipiscing elit.
+          Practice areas.
         </h2>
 
         <div
@@ -70,7 +70,7 @@ export function PracticeAreas() {
             >
               {featured && (
                 <Image
-                  src="https://picsum.photos/seed/lorem-ipsum-law-office/900/900"
+                  src="https://images.unsplash.com/photo-1767972159871-b9f5d320be2b?q=80&w=900&h=900&fit=crop&auto=format"
                   alt=""
                   fill
                   sizes="(min-width: 1024px) 45vw, 90vw"

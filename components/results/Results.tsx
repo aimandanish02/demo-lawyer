@@ -11,10 +11,10 @@ type Stat = {
 };
 
 const STATS: Stat[] = [
-  { value: 236, suffix: "+", label: "Lorem Ipsum Resolved" },
-  { value: 17, label: "Dolor Sit Practice" },
-  { value: 91, suffix: "%", label: "Consectetur Pre-Trial" },
-  { value: 4.9, decimals: 1, suffix: "/5", label: "Adipiscing Elit Rating" },
+  { value: 236, suffix: "+", label: "Cases Resolved" },
+  { value: 17, label: "Years in Practice" },
+  { value: 91, suffix: "%", label: "Settled Pre-Trial" },
+  { value: 4.9, decimals: 1, suffix: "/5", label: "Client Rating" },
 ];
 
 function StatTile({ value, decimals = 0, prefix, suffix, label }: Stat) {
@@ -37,7 +37,7 @@ export function Results() {
     <section id="results" className="border-y border-ink-line/60 py-(--space-section)">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
         <h2 className="max-w-lg font-display text-4xl leading-tight text-bone md:text-5xl">
-          Ut labore et dolore.
+          Track record.
         </h2>
 
         <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-2 md:grid-cols-4 md:gap-x-0">

@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { GraduationCap, MapPin } from "@phosphor-icons/react";
+import { FileArrowDown, GraduationCap, MapPin } from "@phosphor-icons/react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const CREDENTIALS = [
-  { icon: GraduationCap, label: "Lorem University, J.D." },
-  { icon: MapPin, label: "Ipsum Dolor, Sit State" },
+  { icon: GraduationCap, label: "Meridian University School of Law, J.D." },
+  { icon: MapPin, label: "Cedar Falls, Meridian" },
 ];
 
 export function About() {
@@ -21,8 +21,8 @@ export function About() {
         <div data-reveal className="md:col-span-5">
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[20px] border border-ink-line">
             <Image
-              src="https://picsum.photos/seed/lorem-ipsum-desk-study/900/1125"
-              alt="Attorney reviewing documents at a desk"
+              src="https://images.unsplash.com/photo-1758518729929-8210d3b0839e?q=80&w=900&h=1125&fit=crop&crop=faces&auto=format"
+              alt="Elena Marchetti reviewing documents at her desk"
               fill
               loading="lazy"
               sizes="(min-width: 768px) 35vw, 90vw"
@@ -33,16 +33,17 @@ export function About() {
 
         <div data-reveal className="md:col-span-7">
           <h2 className="font-display text-4xl leading-tight text-bone md:text-5xl">
-            Sit amet <em className="italic text-moss-strong">consectetur</em>.
+            Seventeen years in <em className="italic text-moss-strong">the room</em>.
           </h2>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-bone-muted">
-            Ut enim ad minim veniam quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore.
+            Elena spent nine years as senior litigation associate at
+            Calloway &amp; Voss LLP before opening her own practice in 2016.
+            She has argued before the Meridian Court of Appeals and tried
+            cases to verdict in both civil and criminal courts.
           </p>
           <p className="mt-4 max-w-xl text-base leading-relaxed text-bone-muted">
-            Excepteur sint occaecat cupidatat non proident sunt in culpa qui
-            officia deserunt mollit anim id est laborum.
+            Her practice is deliberately small — every client works directly
+            with Elena, not a rotating team of associates.
           </p>
 
           <ul className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-8">
@@ -53,6 +54,16 @@ export function About() {
               </li>
             ))}
           </ul>
+
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-flex items-center gap-2 rounded-full border border-ink-line px-6 py-3.5 text-sm font-semibold text-bone transition-colors duration-150 hover:border-moss/60 hover:text-moss-strong"
+          >
+            View Resume
+            <FileArrowDown size={16} weight="bold" />
+          </a>
         </div>
       </div>
     </section>

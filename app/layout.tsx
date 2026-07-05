@@ -16,9 +16,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Lorem Ipsum Dolor - Attorney at Law",
+  title: "Elena Marchetti - Attorney at Law",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.",
+    "Elena Marchetti is a trial attorney in Cedar Falls handling personal injury, business litigation, family law, and estate matters.",
 };
 
 export default function RootLayout({

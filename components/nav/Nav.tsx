@@ -22,13 +22,13 @@ export function Nav() {
         <a
           href="#top"
           className="flex items-center gap-2.5"
-          aria-label="Lorem Ipsum Dolor, home"
+          aria-label="Elena Marchetti, home"
         >
           <span className="flex h-9 w-9 items-center justify-center rounded-full border border-moss/50 font-display text-base italic text-moss-strong">
-            L
+            EM
           </span>
           <span className="font-display text-lg tracking-tight text-bone">
-            Lorem Ipsum Dolor
+            Elena Marchetti
           </span>
         </a>
 

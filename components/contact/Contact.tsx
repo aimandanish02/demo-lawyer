@@ -12,9 +12,9 @@ import {
 const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? "";
 
 const CONTACT_DETAILS = [
-  { icon: MapPin, label: "1200 Lorem Avenue, Suite 400, Ipsum City" },
+  { icon: MapPin, label: "1200 Meridian Avenue, Suite 400, Cedar Falls" },
   { icon: Phone, label: "+1 (312) 555-0148" },
-  { icon: EnvelopeSimple, label: "consult@loremipsumlaw.com" },
+  { icon: EnvelopeSimple, label: "consult@marchettilaw.com" },
   { icon: Clock, label: "Mon-Fri, 9:00-18:00" },
 ];
 
@@ -66,11 +66,11 @@ export function Contact() {
       <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-12 px-6 md:grid-cols-12 md:gap-10 md:px-10">
         <div className="md:col-span-5">
           <h2 className="font-display text-4xl leading-tight text-bone md:text-5xl">
-            Nostrud exercitation.
+            Book a consult.
           </h2>
           <p className="mt-4 max-w-sm text-base leading-relaxed text-bone-muted">
-            Ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute
-            irure dolor.
+            First consultation is free. Tell me briefly what's going on and
+            I'll follow up within one business day.
           </p>
 
           <ul className="mt-8 flex flex-col gap-4">
@@ -90,11 +90,11 @@ export function Contact() {
               className="flex min-h-[320px] flex-col justify-center rounded-[20px] border border-moss/40 bg-moss/10 p-8"
             >
               <p className="font-display text-2xl text-bone">
-                Gratias tibi ago.
+                Thank you.
               </p>
               <p className="mt-2 max-w-sm text-sm leading-relaxed text-bone-muted">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque.
+                Your message has been received. Expect a reply within one
+                business day.
               </p>
             </div>
           ) : (
@@ -157,8 +157,8 @@ export function Contact() {
                   className="resize-none rounded-lg border border-ink-line bg-ink-raised px-4 py-3 text-sm text-bone placeholder:text-bone-muted/60 outline-none focus:border-moss focus:ring-2 focus:ring-moss/40"
                 />
                 <p className="text-xs text-bone-muted">
-                  Lorem ipsum dolor sit amet, do not include privileged
-                  details in this form.
+                  This form is not a secure channel — please do not include
+                  privileged or sensitive details here.
                 </p>
               </div>
 
